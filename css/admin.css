@@ -1,0 +1,381 @@
+body {
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+#corps {
+    width: 80%;
+    margin: 40px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #333;
+}
+
+.admin-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.admin-card {
+    background: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.admin-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.admin-card a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Bouton ajouter */
+.btn-add {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-add:hover {
+    background: #218838;
+}
+
+/* Tableau admin */
+.admin-table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-table th {
+    background: #333;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Boutons actions */
+.btn-edit {
+    background: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.btn-edit:hover {
+    background: #0069d9;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+
+
+
+
+.admin-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 450px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.admin-form button {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.admin-form button:hover {
+    background: #218838;
+}
+
+
+/* 
+   TABLEAU ADMIN
+   -------------------------
+   Style général du tableau utilisé dans l'administration
+*/
+.admin-table {
+    width: 100%;                 /* Le tableau prend toute la largeur */
+    border-collapse: collapse;   /* Supprime les espaces entre les bordures */
+    background: white;           /* Fond blanc pour un rendu propre */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère pour un effet carte */
+}
+
+/* 
+   EN-TÊTES DU TABLEAU
+   -------------------------
+   Style des <th> (titres des colonnes)
+*/
+.admin-table th {
+    background: #333;            /* Fond noir/gris foncé */
+    color: white;                /* Texte blanc pour contraste */
+    padding: 12px;               /* Espacement interne */
+    text-align: left;            /* Alignement du texte à gauche */
+}
+
+/* 
+   CELLULES DU TABLEAU
+   -------------------------
+   Style des <td> (contenu des lignes)
+*/
+.admin-table td {
+    padding: 12px;               /* Espacement interne */
+    border-bottom: 1px solid #ddd; /* Ligne grise entre les lignes */
+}
+
+
+
+
+
+/* 
+   Bouton de retour vers le tableau de bord admin
+   ------------------------------------------------
+   - Bouton discret mais visible
+   - Style cohérent avec les autres boutons admin
+   - Utilisé sur toutes les pages internes (produits, commandes, clients…)
+*/
+.btn-back {
+    display: inline-block;      /* Permet de gérer padding + margin comme un bloc */
+    background: #6c757d;        /* Gris élégant (style Bootstrap) */
+    color: white;               /* Texte blanc pour contraste */
+    padding: 10px 18px;         /* Taille confortable du bouton */
+    border-radius: 6px;         /* Coins arrondis pour un look moderne */
+    text-decoration: none;      /* Supprime le soulignement du lien */
+    font-weight: bold;          /* Texte plus visible */
+    margin-bottom: 20px;        /* Espace sous le bouton */
+}
+
+/* 
+   Effet hover du bouton
+   ------------------------------------------------
+   - Assombrit légèrement le bouton au survol
+   - Donne un retour visuel à l’utilisateur
+*/
+.btn-back:hover {
+    background: #5a6268;        /* Gris un peu plus foncé */
+}
+
+
+/* 
+   CONTENEUR PRINCIPAL
+   ----------------------------------------------------
+   - Centre le contenu
+   - Ajoute un espace autour
+   - Donne un rendu propre et aéré
+*/
+#corps {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* 
+   TITRES
+   ----------------------------------------------------
+   - Style simple et élégant
+   - Ligne fine en dessous pour structurer la page
+*/
+h2, h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+}
+
+
+/* 
+   BLOC D’INFORMATIONS CLIENT
+   ----------------------------------------------------
+   - Fond clair
+   - Bord arrondi
+   - Ombre légère
+   - Espacement interne
+*/
+.info-client {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+
+/* 
+   TABLEAU DES ARTICLES
+   ----------------------------------------------------
+   - Style moderne
+   - Lignes séparées
+   - En-tête sombre
+*/
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.admin-table th {
+    background: #2c3e50;      /* bleu foncé élégant */
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-table tr:hover {
+    background: #f9f9f9;       /* effet survol discret */
+}
+
+
+/* 
+   IMAGE DES PRODUITS
+   ----------------------------------------------------
+   - Taille uniforme
+   - Coins arrondis
+*/
+.admin-table img {
+    border-radius: 6px;
+}
+
+
+/* 
+   BOUTON RETOUR
+   ----------------------------------------------------
+   - Style simple et moderne
+   - Couleur neutre
+*/
+.btn-back {
+    display: inline-block;
+    background: #6c757d;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-back:hover {
+    background: #5a6268;
+}
+
+
+/* SIDEBAR ADMIN */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: #2c3e50;
+    padding-top: 20px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+}
+
+.sidebar h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #34495e;
+    padding-left: 28px;
+}
+
+.sidebar .logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: #ff7675;
+}
+
+/* CONTENU PRINCIPAL */
+.content {
+    margin-left: 240px; /* espace pour la sidebar */
+    padding: 20px;
+}
+
+
+
+

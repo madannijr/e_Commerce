@@ -1,0 +1,122 @@
+ul#product-list {
+	overflow:hidden;
+}
+
+li.product {
+	float : left;
+	position: relative;
+	width: 255px;
+	height: 400px;
+	margin: 4px;
+	padding: 5px 0;
+	background-color: #eae5ce;
+	border: 1px solid #d4ceb4;
+}
+
+.product h3 {
+	text-align: center;
+	height: 40px;
+}
+
+.product img {
+	display: block;
+	max-width: 250px;
+	max-height: 250px;
+	margin: 0 auto;
+}
+
+.product strong {
+	display: block;
+	font-size: 18px;
+	text-align: center;
+}
+
+.product p {
+	font-size: 12px;
+	text-align: justify;
+	padding: 5px;
+}
+
+.product a {
+	display: block;
+	width: 245px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	bottom: 0;
+	right:0;
+	padding: 0 5px;
+	font-size: 12px;
+	text-align: right;
+	color: black;
+	background-color: #d4ceb4;
+	font-weight: bold;
+}
+
+/*
+ * ----
+ * login
+ * ----
+ */
+form#login {
+	width: 260px;
+	text-align: center;
+	margin: 150px auto;
+	padding: 10px;
+	padding-top: 20px;
+	background-color: #eae5ce;
+	border: 1px solid #d4ceb4;
+}
+
+/*
+ * ----
+ * creer compte
+ * ----
+ */
+form#creer-compte {
+	width: 300px;
+	text-align: left;
+	margin: 40px auto;
+	padding: 10px;
+	padding-top: 20px;
+	background-color: #eae5ce;
+	border: 1px solid #d4ceb4;
+}
+
+
+
+/*
+ * ----
+ * vue_produit
+ * ----
+ */
+div#detail-produit {
+	width: 100%;
+}
+
+#detail-produit h2 {
+	font-size: 2em;
+}
+
+#detail-produit img {
+	float: left;
+}
+
+#detail-produit strong {
+	display: block;
+	margin: 20px 40px;
+	font-size: 3em;
+	text-align: right;
+}
+
+#detail-produit p {
+
+}
+
+form#form-produit, form#form-panier {
+	text-align: right;
+	margin: 40px;
+	margin-bottom: 150px;
+}
+
+

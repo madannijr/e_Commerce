@@ -1,0 +1,57 @@
+/* Le bloc produit doit avoir une hauteur fixe */
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px; /* ajuste selon tes images */
+    padding: 10px;
+    background: #f5f0e6;
+    border-radius: 6px;
+}
+
+/* Conteneur des boutons */
+.actions-produit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* pousse les boutons en bas */
+}
+
+/* Style des boutons */
+.btn-panier {
+    background: #8ea800;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-details {
+    background: #333;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Correction pour les boutons dans la liste produits */
+.product .actions-produit a,
+.product .actions-produit input[type="submit"] {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: normal !important;
+    background-color: #d4ceb4;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: black;
+    border-radius: 4px;
+}
+
+/* Conteneur des deux boutons */
+.actions-produit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
