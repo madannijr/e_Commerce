@@ -3,14 +3,11 @@ require('securite.php');
 require('../connexion.php');
 $connexion = connexionBd();
 
-// Récupération des commandes
-$sql = "SELECT id_commande, id_client, nom_client, prenom_client, email, date_commande
-        FROM commande
-        ORDER BY id_commande DESC";
-
+// Récupération des clients
+$sql = "SELECT * FROM client ORDER BY id_client DESC";
 $stmt = $connexion->prepare($sql);
 $stmt->execute();
-$commandes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +17,7 @@ $commandes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
     <link href="../css/style1.css" rel="stylesheet" type="text/css" />
     <link href="../css/admin.css" rel="stylesheet" type="text/css" />
-    <title>Gestion des commandes</title>
+    <title>Gestion des clients</title>
 </head>
 
 <body>
@@ -32,30 +29,28 @@ $commandes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="content">
 <section id="corps">
 
-    <h2>Gestion des commandes</h2>
+    <h2>Gestion des clients</h2>
 
     <a href="index.php" class="btn-back">⬅ Retour au tableau de bord</a>
 
     <table class="admin-table">
         <tr>
             <th>ID</th>
-            <th>Client</th>
+            <th>Nom</th>
+            <th>Prénom</th>
             <th>Email</th>
-            <th>Date</th>
-            <th>Actions</th>
+            <th>Téléphone</th>
+            <th>Rôle</th>
         </tr>
 
-        <?php foreach($commandes as $cmd): ?>
+        <?php foreach($clients as $c): ?>
         <tr>
-            <td><?= $cmd['id_commande'] ?></td>
-            <td><?= $cmd['prenom_client'] . " " . $cmd['nom_client'] ?></td>
-            <td><?= $cmd['email'] ?></td>
-            <td><?= $cmd['date_commande'] ?></td>
-            <td>
-                <a class="btn-edit" href="details_commande.php?id=<?= $cmd['id_commande'] ?>">
-                    Voir détails
-                </a>
-            </td>
+            <td><?= $c['id_client'] ?></td>
+            <td><?= $c['nom'] ?></td>
+            <td><?= $c['prenom'] ?></td>
+            <td><?= $c['email'] ?></td>
+            <td><?= $c['tel'] ?></td>
+            <td><?= $c['role'] ?></td>
         </tr>
         <?php endforeach; ?>
     </table>

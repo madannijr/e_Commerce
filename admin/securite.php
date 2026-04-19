@@ -3,7 +3,8 @@
         session_start();
     }
     if (!isset($_SESSION['id_client']) || $_SESSION['role'] !== 'admin') {
-    echo "Accès refusé.";
-    exit();
+         echo "Accès refusé.";
+        header('Location: ../index.php');
+        exit();
 }
 ?>
