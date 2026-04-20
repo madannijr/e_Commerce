@@ -22,12 +22,12 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
 
-<!-- 🟦 SIDEBAR (toujours en dehors du contenu) -->
-<?php require('sidebar.php'); ?>
 
-<!-- 🟩 CONTENU PRINCIPAL DÉCALÉ -->
-<div class="content">
-<section id="corps">
+    <?php require('sidebar.php'); ?>
+
+
+    <div class="content">
+    <section id="corps">
 
     <h2>Gestion des clients</h2>
 
@@ -41,6 +41,7 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <th>Email</th>
             <th>Téléphone</th>
             <th>Rôle</th>
+            <th>Action</th>
         </tr>
 
         <?php foreach($clients as $c): ?>
@@ -51,7 +52,11 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <td><?= $c['email'] ?></td>
             <td><?= $c['tel'] ?></td>
             <td><?= $c['role'] ?></td>
+            <td>
+                <a class="btn-edit" href="modifier_clients.php?id=<?= $c['id_client'] ?>">Modifer</a>
+            </td>
         </tr>
+
         <?php endforeach; ?>
     </table>
 

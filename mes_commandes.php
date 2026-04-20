@@ -65,7 +65,9 @@ $commandes = $req->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= $cmd['id_commande'] ?></td>
                     <td><?= $cmd['date_commande'] ?></td>
                     <td><?= $total ?> €</td>
-                    <td><a href="detail_commande.php?id=<?= $cmd['id_commande'] ?>">Voir détails</a></td>
+                    <td><a  href="detail_commande.php?id=<?= $cmd['id_commande'] ?>"
+                        style="color: gray;"
+                    >Voir détails</a></td>
                 </tr>
 
             <?php endforeach; ?>

@@ -10,7 +10,7 @@ if (!isset($_GET['id'])) {
 
 $id_commande = intval($_GET['id']);
 
-    // Récupérer les infos de la commande + téléphone du client
+    // Récupérer les infos de la commande 
     $sql = "SELECT c.*, cl.tel
             FROM commande c
             LEFT JOIN client cl ON c.id_client = cl.id_client

@@ -5,7 +5,7 @@ require('connexion.php');
 $connexion = connexionBd();
 
 // Message erreur ou de succès 
-$message = "";
+$message = " ";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -68,11 +68,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php require('header.php'); ?>
 
     <section id="corps">
-
-        <?php if(!empty($message)) : ?>
-            <p style="color: red;"><?= htmlspecialchars($message) ?></p>
-        <?php endif; ?>    
-
         <h2>Créer un compte</h2>
 
         <form action="creer_compte.php" method="post" id="creer-compte">
@@ -111,6 +106,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
         </form>
+        
+        <?php if(!empty($message)) : ?>
+            <p style="color: red;"><?= htmlspecialchars($message) ?></p>
+        <?php endif; ?> 
     </section>
 
     <?php require('footer.php'); ?>
